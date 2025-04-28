@@ -8,8 +8,8 @@ from scripts.script1 import MyClass
 def repo1_dag():
     @task
     def printer():
-        a = importlib.import_module("scripts.script1.MyClass")
-        print(MyClass.x)
+        a = MyClass()
+        print(a.x)
 
     printer()
 repo1_dag()
